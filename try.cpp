@@ -1,42 +1,70 @@
 #include <iostream>
 using namespace std;
-float sum_of_elements(int arr1[],int arr2[],int n,int m){
-	
-	arr1[n];
-	arr2[m];
-	float sum=0;
-	if(n==m){
-	for(int i=0;i<n;i++){
-		sum+=(arr1[i]+arr2[i]);
+int search(int arg[],int low,int high,int value){
+
+	while(low<=high){
+		int mid=(low+high)/2;
+		if(arg[mid]==value){
+			return mid;
+		}
+		if(arg[mid]>value){
+			high=mid-1;
+		}
+		if(arg[mid]<value){
+		low=mid+1;	
+		}
+		
 	}
-	}else{
-	for(int i=0;i<n;i++){
-		sum+=arr1[i];
-	}
-	for(int j=0;j<m;j++){
-		sum+=arr2[j];
-	}
-	}	
-	return sum;	
-	
-	
+	return arg;
+//	return -1;
 }
-	
 
 int main(){
-for(int i=1;i<=5;i++){
-	if(i%2==0){
-		for(int j=1;j<=i;j++){
-			cout<<j<<" ";
-		}
-	}else{
-		for(int j=i;j>0;j--){
-			cout<<j<<" ";
-		}
-	}
-	cout<<endl;
+// string username,userpassword;
+// string user="user",pass="cpp";
+// int max=3;
+// int attempt=0;
+//
+// do{
+// 	cout<<"enter the name : ";cin>>username;
+// 	cout<<"enter the password : ";cin>>userpassword;
+// 	if(userpassword==pass && username==user){
+// 		cout<<"you are accepted \n";
+// 		break;
+//	 }else{
+//	 	cout<<"\nwrong password or user name\n";
+//	 	attempt++;
+//	 }
+//	 if(attempt==max){
+//	 	cout<<"\n the account is locked\n";
+//	 }
+// 	
+// }while(attempt<3);  
+// 
+ int arr[10]={2,6,8,9,10,11,13,31,36,90};
+ int searchnum;
+ cout<<"enter the number you want to search\n";
+ cin>>searchnum;
+ int flag=search(arr,0,9,searchnum);
+if(flag==-1){
+	cout<<"item not foud\n";
+	
+}else{
+	cout<<"item foud at "<<flag;
 }
-
-
-	return 0;
+ 
+// for(int i=0;i<10;i++){
+// 	if(arr[i]==searchnum){
+// 		flag=i;
+//	 }
+// }
+// if(flag<0){
+// 	cout<<"the number you are searching is not found\n";
+// 	
+// }else{
+// 	cout<<"the number you are searching is found at position "<<flag;
+// }
+ 
+ 
+ 
 }

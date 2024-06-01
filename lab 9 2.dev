@@ -1,0 +1,18 @@
+#include <iostream>
+void myfunction();
+int x = 1 ;
+
+int main ( ) {
+	
+int x = 5 ;
+while ( x < 100)
+myfunction() ;
+return 0 ;
+}
+
+void myfunction ( )
+{
+cout<<"Iteration \n";
+x *= 10;
+}	
+

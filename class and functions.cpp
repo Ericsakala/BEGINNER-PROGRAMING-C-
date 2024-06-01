@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
-struct Car{
-	private:
+using std::string;
+class Car{
 	int year;
 	string make;
 	int speed;
@@ -13,9 +12,9 @@ struct Car{
 			make=m;
 			speed=0;
 		}
-	 getyeer(){return year;}
-	 string getmake(){return make;}
-	 getspeed(){return speed;}
+	int getyeer(){return year;}
+	string getmake(){return make;}
+	int getspeed(){return speed;}
 	
 	void accelerate(){speed+=5;}
 	void brake(){speed-=5;}
